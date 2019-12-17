@@ -1,0 +1,120 @@
+#aboutTheGame {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+        img {
+            float: right;
+            width: 30px;
+            opacity: 0.6;
+            transition: 200ms;
+        }
+
+        img:hover {
+            opacity: 0.8;
+        }
+
+        #imgTitle {
+            background: $game-black;
+            padding: 10px 5px 10px 10px;
+            width: 100px;
+            border-radius: 3px;
+            font-family: 'Signika Negative', sans-serif;
+            @include calcRem(14);
+            box-shadow: 0 0 10px rgba($game-black, 0.5);
+            top: 0;
+            right: 48px;
+            position: absolute;
+            transition: 200ms;
+            opacity: 0;
+
+            p {
+                margin: 0;
+            }
+
+        .imgTitlePoint {
+            position: absolute;
+            border-style: solid;
+            top: 13px;
+            right: -12px;
+            transform: rotate(90deg);
+            border-width: 0 8px 10px 8px;
+            border-color: transparent transparent $game-black transparent;
+        }
+    }
+}
+
+#aboutTheGame:hover #imgTitle {
+    opacity: 1;
+}
+
+.about-container {
+    box-shadow: 0 0 10px $game-black;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 300px;
+    max-height: 300px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: $game-black;
+    padding: 10px 0 0;
+    position: relative;
+    transition: 200ms;
+    z-index: 9;
+    animation: enteringGame 0.7s ease-in;
+
+        p {
+            @include calcRem(18);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Signika Negative', sans-serif;
+            font-weight: 400;
+            list-style: none;
+            cursor: default;
+            margin: 10px 0;
+        }
+        
+        #back {
+            position: relative;
+            top: 40px;
+            left: 20px;
+            text-decoration: none;
+            font-family: 'Permanent Marker', sans-serif;
+            color: rgba($game-white, 0.8);
+            @include calcRem(17);
+        }
+        
+        #back span::before {
+            content: '\00ab';
+            position: absolute;
+            left: -19px;
+            top: -1px;
+            transition: 200ms;
+        }
+
+        #back:hover span::before {
+            left: -26px;
+        }
+
+        #github {
+            position: relative;
+            top: 40px;
+            left: 100px;
+            text-decoration: none;
+            font-family: 'Permanent Marker', sans-serif;
+            color: rgba($game-white, 0.8);
+            @include calcRem(17);
+        }
+        
+        #github span::after {
+            content: '\00bb';
+            position: absolute;
+            right: -19px;
+            top: -1px;
+            transition: 200ms;
+        }
+
+        #github:hover span::after {
+            right: -26px;
+        }
+}

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Signika+Negative:400,700|VT323|&display=swap');
+
+body {
+    margin: 0;
+    background: $game-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: rgba($game-white, 0.7);
+    z-index: -99;
+    cursor: default;
+}
+
+.row::after {
+    clear: both;
+    content: '';
+}
+
+#information {
+    position: relative;
+    min-width: 270px;
+    max-width: 270px;
+    min-height: 290px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+    background: linear-gradient(-30deg, #6a54e9, #1be0c0);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    animation: gradient 10s infinite ease-in-out;
+    transform: translateX(300px);
+    animation: enteringGameInfo 1.9s ease-in;
+
+        p {
+            color: rgba($game-black, 0.8);
+            @include calcRem(18);
+            cursor: default;
+            font-family: 'Signika Negative', sans-serif;
+            font-weight: 400;
+            margin: 10px 0 10px 5px;
+        }
+
+        #infoText {
+            animation: fadeInfo 800ms ease;
+            display: none;
+        }
+
+        span {
+            @include calcRem(17);
+            font-family: 'Permanent Marker', sans-serif;
+        }
+}
+
+#decor {
+    position: absolute;
+    top: -111px;
+    left: -20px;
+    transform: rotate(-30deg);
+    width: 60px;
+    animation: decor 5s infinite;
+}
+
+.story-container {
+    box-shadow: 0 0 10px $game-black;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 300px;
+    max-height: 300px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: $game-black;
+    padding: 10px 0 0;
+    position: relative;
+    transition: 200ms;
+    z-index: 9;
+    animation: enteringGame 0.7s ease-in;
+
+        h1 {
+            @include calcRem(22);
+            cursor: default;
+            font-family: 'Signika Negative', sans-serif;
+            font-weight: 900;
+            margin: 10px 0 20px;
+            padding: 0 20px;
+            animation: title 3s infinite ease-in-out;
+        }
+
+        ul {
+            padding: 0 0 0 20px;
+
+            li {
+                @include calcRem(18);
+                padding: 10px 20px 10px 0;
+                cursor: pointer;
+                font-family: 'Signika Negative', sans-serif;
+                font-weight: 400;
+                list-style: none;
+            }
+        }
+            
+        
+        li:hover {
+            color: $game-white;
+        }
+}
+
+#placeholder {
+    position: relative;
+    min-width: 250px;
+    min-height: 300px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 10px 20px 0;
+    z-index: -9;
+    transform: translateX(-300px);
+}
+
+#preview {
+    min-width: 250px;
+    min-height: 300px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: rgba($game-black, 0.5);
+    padding: 10px 20px 0;
+    position: relative;
+    transition: 200ms;
+    animation: showPrev 0.4s ease;
+    font-family: 'Permanent Marker', sans-serif;
+    display: none;
+    z-index: -9;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background: linear-gradient(30deg,#ff4cb4, #448fff);
+        background-size: 200% 200%;
+        background-position: 0% 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        animation: gradient 10s infinite ease-in-out;
+
+            img {
+                transition: 200ms;
+                transform: translate(26%, 26%);
+            }
+    }
+}
+
+#continueBtn {
+    font-family: 'Permanent Marker', sans-serif;
+    background: none;
+    color: rgba($game-black, 0.8);
+    @include calcRem(18);
+    border-color: rgba($game-black, 0);
+    border-radius: 4px;
+    right: 20px;
+    bottom: 5px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+    animation: fadeIn 1.5s ease;
+}
+
+#continueBtn:hover {
+    color: $game-black;
+}
+
+#transition {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: newPage 500ms;
+    background: #000;
+    z-index: 99;
+    pointer-events: none;
+    display: none;
+}
+
+@keyframes newPage {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

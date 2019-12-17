@@ -1,0 +1,432 @@
+#ginro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 310px;
+    display: none;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transform: scale(0.93);
+}
+
+#ginro-container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    left: -50px;
+    top: -2px;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.90);
+}
+
+.ginrohead {
+    position: absolute;
+    top: -3px;
+    right: 2px;
+    width: 33px;
+    height: 45px;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 170%;
+    border-bottom-right-radius: 150%;
+    background: radial-gradient(#ddb58f 10%, #af8b69 80%);
+    box-shadow: inset 0 0 20px #1313138c, 0 3px 7px #1a1a1aaf;
+}
+
+.ginrohair {
+    position: absolute;
+    width: 36px;
+    height: 15px;
+    top: -9px;
+    left: -4px;
+    background: radial-gradient(#57483b 10%, #33281d 80%);
+    background-size: 100% 100%;
+    background-position: -5px 0px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 900%;
+    border-bottom-left-radius: 80px;
+    transform: rotate(5deg);
+}
+
+.ginroear {
+    position: absolute;
+    top: 18px;
+    right: -5px;
+    width: 6px;
+    height: 9px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background: radial-gradient(#9c826a 10%, #927559 80%);
+    box-shadow: inset 0 0 3px #1313138c, 0 3px 7px #1a1a1a42;
+    z-index: -1;
+}
+
+.ginroear:nth-child(2) {
+    transform: scaleX(-1);
+    left: -5px;
+}
+
+.ginroneck {
+    position: absolute;
+    left: 0px;
+    top: 26px;
+    width: 34px;
+    height: 45px;
+    border-radius: 100px;
+    background: radial-gradient(#00000000 40%, #6d5a49 42%, #ddb58f 100%);
+    background-position: -17px 0;
+    z-index: -1;
+}
+
+.ginroeye {
+    position: absolute;
+    top: 16px;
+    left: 21px;
+    width: 10px;
+    height: 12px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 100%;
+    background: radial-gradient(#272727 10%, rgb(108, 161, 192) 40%, #c9c9c9 45%);
+    box-shadow: inset 0 0 2px 1px #a5a5a5, 0 0 5px #412200c2;
+}
+
+.ginroeye:nth-child(5) {
+    left: 2px;
+    transform: scaleX(-1);
+}
+
+.ginrobody {
+    position: absolute;
+    width: 48px;
+    height: 90px;
+    right: -7px;
+    top: 59px;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    background: radial-gradient(#b0c3ce 30%, #8eeeff);
+    box-shadow: inset -2px 10px 10px #00000041, -3px 5px 20px #11111175;
+    transform: scale(1.08);
+}
+
+.ginroarm-top {
+    position: absolute;
+    width: 18px;
+    height: 60px;
+    left: -17px;
+    background: radial-gradient(#c4dbe9 30%, #7fc8d4);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 22%;
+    border-top-right-radius: 10px;
+    transform: rotate(15deg);
+    box-shadow: inset -2px 10px 10px #0000005d, -3px 5px 20px #11111175;
+}
+
+.ginroarm-top:nth-child(2) {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    transform: rotate(-15deg);
+    left: 48px;
+}
+
+.ginroarm-bottom {
+    position: absolute;
+    width: 14px;
+    height: 50px;
+    top: 55px;
+    left: -25px;
+    background: radial-gradient(#c99b7d 10%, #a8795a 80%);
+    box-shadow: inset 0 10px 10px #1313136e, 0 3px 7px #1a1a1aaf;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 150%;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
+.ginroarm-bottom:nth-child(3) {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 0;
+    transform: rotate(-5deg);
+    left: 59px;
+    top: 53px;
+}
+
+.ginrohand {
+    position: absolute;
+    top: 109px;
+    width: 25px;
+    height: 10px;
+    left: -40px;
+    background: radial-gradient(#c99b7d 10%, #a8795a 80%);
+    box-shadow: inset -2px 5px 10px #13131338, 0 0px 7px #1a1a1a79;
+    bottom: -14px;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 40%;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 10%;
+    transform: rotate(-65deg);
+}
+
+.ginrohand:nth-child(5) {
+    top: 100px;
+    width: 15px;
+    height: 12px;
+    left: 66px;
+    transform: rotate(65deg) scaleX(-1);
+}
+
+.ginroleg-top {
+    bottom: -75px;
+    position: absolute;
+    width: 29px;
+    height: 85px;
+    left: -5px;
+    background: radial-gradient(#242833, #000000);
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 120%;
+    border-bottom-right-radius: 100%;
+    z-index: -8;
+    transform: rotate(3deg);
+    box-shadow: -3px 5px 20px #11111175;
+}
+
+.ginroleg-top:nth-child(7) {
+    transform: rotate(-3deg) scaleX(-1);
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 120%;
+    left: 25px;
+}
+
+.ginroleg-bottom {
+    bottom: -126px;
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: -0px;
+    background: radial-gradient(#191c25, #050505);
+    box-shadow: inset -2px 20px 10px #050505cb, 0 0px 7px #1a1a1a79;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 130%;
+    z-index: -9;
+    transform: rotate(-4deg);
+}
+
+.ginroleg-bottom:nth-child(9) {
+    left: 31px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 130%;
+    border-bottom-right-radius: 0%;
+    transform: rotate(4deg);
+}
+
+.ginroboottop {
+    position: absolute;
+    left: 0px;
+    width: 15px;
+    height: 6px;
+    bottom: -130px;
+    background: linear-gradient(-3deg, #acacac 0%, #b0c3ce 50%);
+    box-shadow: inset -1px -2px 3px #000e163b, -5px 10px 20px #21212131;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.ginroboottop:nth-child(2) {
+    left: 37px;
+}
+
+.ginrobootband {
+    position: absolute;
+    width: 12px;
+    left: 1px;
+    height: 10px;
+    bottom: -139px;
+    background: linear-gradient(20deg, #0d9eb8, #8228e9);
+    box-shadow: inset -5px 0 10px #52b5c259;
+}
+
+.ginrobootband:nth-child(2) {
+    left: 38px;
+}
+
+.ginrobootbottom {
+    position: absolute;
+    left: -9px;
+    width: 23px;
+    height: 12px;
+    bottom: -148px;
+    background: linear-gradient(-3deg, #acacac 0%, #b0c3ce 50%);
+    box-shadow: inset -1px -2px 3px #0affffcb, -5px 10px 20px #21212131;
+    border-radius: 40%;
+    border-bottom-right-radius: 90%;
+    border-bottom-left-radius: 60%;
+    border-top-left-radius: 190%;
+    border-top-right-radius: 100%;
+    animation: ginroboots 2s infinite;
+}
+
+@keyframes ginroboots {
+    0%, 100% {
+        box-shadow: inset -1px -2px 3px #0affffcb, 0 2px 5px #0affff93;
+    }
+
+    50% {
+        box-shadow: inset -1px -2px 3px #0affffcb, 0 2px 5px #0affff00;
+    }
+}
+
+.ginrobootbottom:nth-child(3) {
+    left: 37px;
+    transform: scaleX(-1);
+}
+
+.ginrobodyband {
+    width: 80px;
+    height: 30px;
+    right: -24px;
+    top: 80px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 1px 0px #555555;
+    transform: rotate(62deg);
+}
+
+.ginrobodyband2 {
+    width: 79px;
+    height: 30px;
+    right: -26px;
+    top: 73px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 1px 0px #313131;
+    transform: rotate(55deg);
+}
+
+
+.ginrobodyband3 {
+    width: 79px;
+    height: 30px;
+    right: -20px;
+    top: 73px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 1px 0px #313131;
+    transform: rotate(-55deg);
+}
+
+.ginrobodyband4 {
+    width: 80px;
+    height: 30px;
+    right: -23px;
+    top: 80px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 1px 0px #555555;
+    transform: rotate(-62deg);
+}
+
+
+.ginroshoulder, .ginroshoulder2 {
+    position: absolute;
+    top: 56px;
+    right: -11px;
+    width: 7px;
+    height: 22px;
+    background: radial-gradient(#535353, #1b1b1b);
+    box-shadow: inset 0 2px 5px black, -3px 5px 20px #11111175;
+    border-top-right-radius: 90%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 400%;
+    transform: rotate(5deg);
+}
+
+.ginroshoulder2 {
+    transform: rotate(-5deg) scaleX(-1);
+    right: 37px;
+}
+
+.ginrobutton {
+    position: absolute;
+    top: 54px;
+    right: -14px;
+    width: 10px;
+    height: 7px;
+    background: radial-gradient(#c4c4c4, #2e2e2e);
+    box-shadow: inset 0 1px 3px black;
+    border-radius: 100%;
+    transform: rotate(20deg);
+    z-index: 9;
+}
+
+.ginrobutton:nth-child(3) {
+    right: 36px;
+    transform: rotate(-20deg);
+}
+
+.ginrobelt {
+    bottom: 57px;
+    right: -12px;
+    width: 60px;
+    height: 14px;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 20%;
+    background: linear-gradient(to right, #1b1b1b, #474747 50%, #a3a3a3, #474747, #1b1b1b);
+    box-shadow: inset 0 0 10px black;
+    transform: rotate(7deg);
+    position: absolute;
+    z-index: 2;
+}
+
+.ginrobelt:nth-child(12) {
+    height: 9px;
+    bottom: 57px;
+    transform: scaleX(-1) rotate(7deg);
+    background: linear-gradient(to left, #1b1b1b, #474747, #7a7a7a, #474747, #1b1b1b);
+    right: -12px;
+    z-index: 1;
+}
+
+.ginrobuckle {
+    position: absolute;
+    bottom: 59px;
+    right: 3px;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(#a7eeea, #2e2e2e);
+    box-shadow: inset 0 1px 3px black, 0 0 20px #8af1ff;
+    border-radius: 2px;
+    z-index: 9;
+    animation: ginrobuckle 2s infinite;
+}
+
+@keyframes ginrobuckle {
+    0%, 100% {box-shadow: inset 0 1px 3px black, 0 0 20px #8af1ff;}
+    50% {box-shadow: inset 0 1px 3px black, 0 0 20px 2px #8af1ff;}
+}
+
+.ginrogun {
+    position: absolute;
+    top: 209px;
+    right: 0;
+    transform: scale(0.3) rotate(37deg) scaleY(-1);
+    z-index: -1;
+}
+
+.ginrogun .gunWrapper {
+    animation: none;
+}

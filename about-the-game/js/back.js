@@ -1,0 +1,3 @@
+let adventures = () => {
+    window.location = '../';
+}

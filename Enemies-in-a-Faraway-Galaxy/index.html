@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Hotjar Tracking Code for https://wallerweave.com/adventure-game/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1615968,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/override.css">
+    <link rel="stylesheet" type="text/css" href="css/room.css">
+    <link rel="stylesheet" type="text/css" href="css/alien.css">
+    <link rel="stylesheet" type="text/css" href="css/zoie.css">
+    <link rel="stylesheet" type="text/css" href="css/lasergun.css">
+    <link rel="stylesheet" type="text/css" href="css/boots.css">
+    <link rel="stylesheet" type="text/css" href="css/ginro.css">
+    <link rel="stylesheet" type="text/css" href="css/darkness.css">
+    <link rel="stylesheet" type="text/css" href="css/closeupalien.css">
+    <link rel="stylesheet" type="text/css" href="css/shuttle.css">
+    <link rel="stylesheet" type="text/css" href="css/shuttlefull.css">
+    <link rel="stylesheet" type="text/css" href="css/spacestation.css">
+    <link rel="stylesheet" type="text/css" href="css/stationcrash.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <title>Adventure Game</title>
+</head>
+
+<body>
+    <div class="transition"></div>
+    
+    <div id="aboutTheGame">
+        <a id="aboutImg" href="/about-the-game"><img src="images/about.png" alt="about-the-game"></a>
+        <div id="imgTitle">
+            <div class="imgTitlePoint"></div>
+            <p>About the game</p>
+        </div>
+    </div>
+
+    <div id="information">
+        <p>Adventure: <span id="adventure"></span></p>
+        <p>Name: <span id="adventurer"></span></p>
+        <p>Companion: <span id="companion"></span></p>
+        <p>Equipment: <span id="equipment"></span></p>
+        <img id="decor" src="../images/decor.png" alt="decor.png">
+        <button id="leaveAdventure">New adventure</button>
+    </div>
+    <div class="story-container" id="storyCard">
+        <h1 id="title">&nbsp;</h1>
+        <ul>
+            <li id="choice1">&nbsp;</li>
+            <li id="choice2">&nbsp;</li>
+        </ul>
+        <div id="tryAgain" class="theEnd"><span>&nbsp; Try again</span></div>
+        <div id="newAdventure" class="theEnd"><span>New adventure &nbsp;</span></div>
+    </div>
+    <div id="placeholder">
+        <div class="wrapper">
+            <div class="room" id="room">
+                <div class="door">
+                    <div class="fluorescent"></div>
+                    <div class="handle-contianer">
+                        <div id="handle"></div>
+                        <div id="lock"></div>
+                    </div>
+
+                    <div id="creature">
+                        <div class="creaturewindow">
+                            <div class="alien-container">
+                                <div class="alienhead">
+                                    <div class="aliencape"></div>
+                                    <div class="alieneye"></div>
+                                    <div class="alieneye"></div>
+                                </div>
+                                <div class="alienbody">
+                                    <div class="alienarm-top"></div>
+                                    <div class="alienarm-top"></div>
+                                    <div class="alienarm-bottom"></div>
+                                    <div class="alienarm-bottom"></div>
+                                    <div class="alienhand"></div>
+                                    <div class="alienhand"></div>
+                                    <div class="alienleg-top"></div>
+                                    <div class="alienleg-top"></div>
+                                    <div class="alienleg-bottom"></div>
+                                    <div class="alienleg-bottom"></div>
+                                    <div class="alienfoot"></div>
+                                    <div class="alienfoot"></div>
+                                </div>
+                                <div class="cloakbutton"></div>
+                                <div class="cloakbutton"></div>
+                                <div class="aliennecklace"></div>
+                                <div class="aliennecklace2"></div>
+                                <div class="aliencloak"></div>
+                                <div class="alienshoulder"></div>
+                                <div class="alienshoulder2"></div>
+                                <div class="alienbelt"></div>
+                                <div class="alienbuckle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window"></div>
+                    <div class="corridor"></div>
+                </div>
+            </div>
+
+            <div class="lasergun" id="laserGun">
+                <div class="gunWrapper">
+                    <div class="gunBody">
+                        <div class="detail"></div>
+                        <div class="detail"></div>
+                        <div class="detail"></div>
+                    </div>
+                    <div class="trigger"></div>
+                    <div class="light"></div>
+                    <div class="stock"></div>
+                    <div class="laserBlock"></div>
+                    <div class="laser"></div>
+                    <div class="barrel"></div>
+                    <div class="laserPoint"></div>
+                </div>
+            </div>
+
+            <div class="antiGrav" id="antiGrav">
+                <div class="bootsContainer">
+                    <div class="bootY"></div>
+                    <div class="bootY"></div>
+                    <div class="bootX"></div>
+                    <div class="bootX"></div>
+                    <div class="band"></div>
+                    <div class="band"></div>
+                </div>
+            </div>
+
+            <div class="Z-013" id="Z-013">
+                <div id="zoie-container">
+                    <div class="zhead">
+                        <div class="zeye"></div>
+                        <div class="zeye"></div>
+                        <div class="zmouth"></div>
+                    </div>
+                    <div class="zbody">
+                        <div class="zneck"></div>
+                        <div class="zarm-top"></div>
+                        <div class="zarm-top"></div>
+                        <div class="zarm-bottom"></div>
+                        <div class="zarm-bottom"></div>
+                        <div class="zhand"></div>
+                        <div class="zhand"></div>
+                        <div class="zleg-top"></div>
+                        <div class="zleg-top"></div>
+                        <div class="zleg-bottom"></div>
+                        <div class="zleg-bottom"></div>
+                        <div class="zfoot"></div>
+                        <div class="zfoot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="alien">
+                <div class="alien-container">
+                    <div class="alienhead">
+                        <div class="aliencape"></div>
+                        <div class="alieneye"></div>
+                        <div class="alieneye"></div>
+                        <div class="alienheadpattern"></div>
+                    </div>
+                    <div class="alienbody">
+                        <div class="alienarm-top"></div>
+                        <div class="alienarm-top"></div>
+                        <div class="alienarm-bottom"></div>
+                        <div class="alienarm-bottom"></div>
+                        <div class="alienhand"></div>
+                        <div class="alienhand"></div>
+                        <div class="alienleg-top"></div>
+                        <div class="alienleg-top"></div>
+                        <div class="alienleg-bottom"></div>
+                        <div class="alienleg-bottom"></div>
+                        <div class="alienfoot"></div>
+                        <div class="alienfoot"></div>
+                    </div>
+                    <div class="cloakbutton"></div>
+                    <div class="cloakbutton"></div>
+                    <div class="aliennecklace"></div>
+                    <div class="aliennecklace2"></div>
+                    <div class="aliencloak"></div>
+                    <div class="alienshoulder"></div>
+                    <div class="alienshoulder2"></div>
+                    <div class="alienbelt"></div>
+                    <div class="alienbuckle"></div>
+                </div>
+            </div>
+
+            <div id="ginro">
+                <div id="ginro-container">
+                    <div class="ginrohead">
+                        <div class="ginrohair"></div>
+                        <div class="ginroear"></div>
+                        <div class="ginroear"></div>
+                        <div class="ginroneck"></div>
+                        <div id="eye1" class="ginroeye"></div>
+                        <div id="eye2" class="ginroeye"></div>
+                    </div>
+                    <div class="ginrobody">
+                        <div class="ginroarm-top"></div>
+                        <div class="ginroarm-top"></div>
+                        <div class="ginroarm-bottom"></div>
+                        <div class="ginroarm-bottom"></div>
+                        <div class="ginrohand"></div>
+                        <div class="ginrohand"></div>
+                        <div class="ginroleg-top"></div>
+                        <div class="ginroleg-top"></div>
+                        <div class="ginroleg-bottom"></div>
+                        <div class="ginroleg-bottom"></div>
+                        <div class="ginroboot">
+                            <div class="ginroboottop"></div>
+                            <div class="ginrobootband"></div>
+                            <div class="ginrobootbottom"></div>
+                        </div>
+                        <div class="ginroboots">
+                            <div class="ginroboottop"></div>
+                            <div class="ginroboottop"></div>
+                            <div class="ginrobootband"></div>
+                            <div class="ginrobootband"></div>
+                            <div class="ginrobootbottom"></div>
+                            <div class="ginrobootbottom"></div>
+                        </div>
+                    </div>
+                    <div class="ginrobutton"></div>
+                    <div class="ginrobutton"></div>
+                    <div class="ginrobodyband"></div>
+                    <div class="ginrobodyband2"></div>
+                    <div class="ginrobodyband3"></div>
+                    <div class="ginrobodyband4"></div>
+                    <div class="ginroshoulder"></div>
+                    <div class="ginroshoulder2"></div>
+                    <div class="ginrobelt"></div>
+                    <div class="ginrobelt"></div>
+                    <div class="ginrobuckle"></div>
+                    <div class="ginrogun">
+                        <div class="gunWrapper">
+                            <div class="gunBody">
+                                <div class="detail"></div>
+                                <div class="detail"></div>
+                                <div class="detail"></div>
+                            </div>
+                            <div class="trigger"></div>
+                            <div class="light"></div>
+                            <div class="stock"></div>
+                            <div class="laserBlock"></div>
+                            <div class="laser"></div>
+                            <div class="barrel"></div>
+                            <div class="laserPoint"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="darkness">
+                <div class="space-back"></div>
+                <div class="space-front"></div>
+                <div id="spaceAnt">
+                    <div class="ant-container">
+                        <div class="anthead">
+                            <div class="anteye"></div>
+                            <div class="anteye"></div>
+                            <div class="antlerinner"></div>
+                            <div class="antlerinner"></div>
+                            <div class="antlerouter"></div>
+                            <div class="antlerouter"></div>
+                        </div>
+                        <div class="antbody">
+                            <div class="antballfront">
+                                <div class="antneck"></div>
+                                <div class="frontlegtop"></div>
+                                <div class="frontlegtop"></div>
+                                <div class="frontlegbottom"></div>
+                                <div class="frontlegbottom"></div>
+                            </div>
+                            <div class="antballmiddle">
+                                <div class="middlelegtop"></div>
+                                <div class="middlelegtop"></div>
+                                <div class="middlelegbottom"></div>
+                                <div class="middlelegbottom"></div>
+                            </div>
+                            <div class="antballback">
+                                <div class="backlegtop"></div>
+                                <div class="backlegtop"></div>
+                                <div class="backlegbottom"></div>
+                                <div class="backlegbottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="closeup">
+                <div class="closeup-container">
+                        <div class="alien-container">
+                            <div class="alienhead">
+                                <div class="aliencape"></div>
+                                <div class="alieneye"></div>
+                                <div class="alieneye"></div>
+                                <div class="alienheadpattern"></div>
+                            </div>
+                            <div class="alienbody">
+                                <div class="alienarm-top"></div>
+                                <div class="alienarm-top"></div>
+                                <div class="alienarm-bottom"></div>
+                                <div class="alienarm-bottom"></div>
+                                <div class="alienhand"></div>
+                                <div class="alienhand"></div>
+                                <div class="alienleg-top"></div>
+                                <div class="alienleg-top"></div>
+                                <div class="alienleg-bottom"></div>
+                                <div class="alienleg-bottom"></div>
+                                <div class="alienfoot"></div>
+                                <div class="alienfoot"></div>
+                            <div class="shot"></div>
+                            </div>
+                            <div class="cloakbutton"></div>
+                            <div class="cloakbutton"></div>
+                            <div class="aliennecklace"></div>
+                            <div class="aliennecklace2"></div>
+                            <div class="aliencloak"></div>
+                            <div class="alienshoulder"></div>
+                            <div class="alienshoulder2"></div>
+                            <div class="alienbelt"></div>
+                            <div class="alienbuckle"></div>
+                        </div>
+                </div>
+            </div>
+
+            <div id="shuttle">
+                <div class="shuttle-container">
+                    <div class="shuttle-container"></div>
+                    <div class=" window-container">
+                        <div class="galaxy">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="dashboard">
+                        <div id=" coordiantes" class="coordinates">
+                            <div class="input">
+                                <p>107ZPL 860XYQ 707VKP 107ZPL</p>
+                            </div>
+                            <div class="inputshadow"></div>
+                        </div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="shuttlefull">
+                <div class="shuttle-container">
+                    <div class="shuttle-container"></div>
+                    <div class=" window-container">
+                        <div class="galaxy">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="dashboard">
+                        <div id=" coordiantes" class="coordinates">
+                            <div class="input">
+                                <p>107ZPL 860XYQ 707VKP 107ZPL</p>
+                            </div>
+                            <div class="inputshadow"></div>
+                        </div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="dblight"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div id="ginro-container">
+                            <div class="ginrohead">
+                                <div class="ginrohair"></div>
+                                <div class="ginroear"></div>
+                                <div class="ginroear"></div>
+                                <div class="ginroneck"></div>
+                            </div>
+                            <div class="ginrobody">
+                                <div class="ginroarm-top"></div>
+                                <div class="ginroarm-top"></div>
+                            </div>
+                            <div class="ginrobutton"></div>
+                            <div class="ginrobutton"></div>
+                            <div class="ginroshoulder"></div>
+                            <div class="ginroshoulder2"></div>
+                        </div>
+                        <div id="zoie-container">
+                            <div class="zhead">
+                            </div>
+                            <div class="zbody">
+                                <div class="zneck"></div>
+                                <div class="zarm-top"></div>
+                                <div class="zarm-top"></div>
+                                <div class="zarm-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="spacestation">
+                <div class="station-container">
+                    <div class="station-top">
+                        <div class="station">
+                            <div class="station-wing"></div>
+                            <div class="station-wing"></div>
+                            <div class="station-circle">
+                                <div class="station-light first"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light second"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light third"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light fourth"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light fifth"></div>
+                            </div>
+                        </div>
+                        <div class="station-connector"></div>
+                    </div>
+
+                    <div class="station-middle">
+                        <div class="ship">
+                            <div class="shipwing"></div>
+                            <div class="shipwing"></div>
+                            <div class="shipmark"></div>
+                        </div>
+                        <div class="station">
+                        <div class="station-wing"></div>
+                        <div class="station-wing"></div>
+                        <div class="station-circle">
+                            <div class="station-light first"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light second"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light third"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fourth"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fifth"></div>
+                        </div>
+                    </div>
+                    <div class="station-connector"></div>
+                </div>
+
+                <div class="station-bottom">
+                    <div class="station">
+                        <div class="station-wing"></div>
+                        <div class="station-wing"></div>
+                        <div class="station-circle">
+                            <div class="station-light first"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light second"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light third"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fourth"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fifth"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crash"></div>
+                <div class="crash"></div>
+                <div class="crash"></div>
+                <div class="crash"></div>
+
+                </div>
+            </div>
+
+            <div id="stationCrash">
+                <div class="station-container">
+                    <div class="station-top">
+                        <div class="station">
+                            <div class="station-wing"></div>
+                            <div class="station-wing"></div>
+                            <div class="station-circle">
+                                <div class="station-light first"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light second"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light third"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light fourth"></div>
+                            </div>
+                            <div class="station-circle">
+                                <div class="station-light fifth"></div>
+                            </div>
+                        </div>
+                        <div class="station-connector"></div>
+                    </div>
+
+                    <div class="station-middle">
+                        <div class="ship">
+                            <div class="shipwing"></div>
+                            <div class="shipwing"></div>
+                            <div class="shipmark"></div>
+                        </div>
+                        <div class="station">
+                        <div class="station-wing"></div>
+                        <div class="station-wing"></div>
+                        <div class="station-circle">
+                            <div class="station-light first"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light second"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light third"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fourth"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fifth"></div>
+                        </div>
+                    </div>
+                    <div class="station-connector"></div>
+                </div>
+
+                <div class="station-bottom">
+                    <div class="station">
+                        <div class="station-wing"></div>
+                        <div class="station-wing"></div>
+                        <div class="station-circle">
+                            <div class="station-light first"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light second"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light third"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fourth"></div>
+                        </div>
+                        <div class="station-circle">
+                            <div class="station-light fifth"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crash"></div>
+                <div class="crash"></div>
+                <div class="crash"></div>
+                <div class="crash"></div>
+
+                </div>
+            </div>
+
+            <div id="home">
+                <div class="planet">
+                        <div class="land">
+                            <div class="sideland"></div>
+                            <div class="sideland"></div>
+                        </div>
+                        <div class="land">
+                            <div class="sideland"></div>
+                            <div class="sideland"></div>                            
+                        </div>
+                        <div class="land">
+                            <div class="sideland"></div>
+                            <div class="sideland"></div>
+                        </div>
+                        <div class="land">
+                            <div class="sideland"></div>
+                        </div>
+                        <div class="planetglow"></div>
+                        <div class="heart-container">
+                            <div class="heart"></div>
+                            <div class="heart"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © <a href="https://wallerweave.com">Selma Waller</a> 2019</p>
+    </footer>
+    <script type="module" src="js/ginro.js"></script>
+</body>
+
+</html>

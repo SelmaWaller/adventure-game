@@ -1,0 +1,71 @@
+#leaveAdventure {
+    background: linear-gradient(120deg, #69cae7d7, #809fe2d7);
+    border: none;
+    padding: 3px 6px;
+    color: rgba($game-black, 0.8);
+    border-radius: 4px;
+    font-family: 'Signika Negative', sans-serif;
+    @include calcRem(16);
+    position: absolute;
+    top: -40px;
+    left: 63px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#leaveAdventure:hover {
+    color: $game-black;
+    transition: 200ms;
+    background: linear-gradient(120deg, #59c4e4, #7395e0);
+    box-shadow: 0 0 7px #88d3ff6c;
+}
+
+.theEnd {
+    font-family: 'Permanent Marker', sans-serif;
+    background: none;
+    color: rgba($game-white, 0.8);
+    @include calcRem(18);
+    border-color: rgba($game-black, 0);
+    border-radius: 4px;
+    right: 45px;
+    bottom: 25px;
+    width: 170px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+    animation: fadeIn 1.5s ease;
+    display: none;
+}
+
+.theEnd:hover {
+    color: $game-white;
+}
+
+.theEnd:nth-child(3) {
+    left: 70px;
+    bottom: 25px;
+}
+
+#tryAgain span::before {
+    content: '\00ab';
+    position: absolute;
+    left: -5px;
+    top: -2px;
+    transition: 200ms;
+}
+
+#tryAgain:hover span::before {
+    left: -12px;
+}
+
+#newAdventure span::after {
+    content: '\00bb';
+    position: absolute;
+    right: 20px;
+    top: -2px;
+    transition: 200ms;
+}
+
+#newAdventure:hover span::after {
+    right: 13px;
+}

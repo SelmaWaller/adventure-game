@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Hotjar Tracking Code for https://wallerweave.com/adventure-game/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1615968,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/adventure1.css">
+    <link rel="stylesheet" type="text/css" href="css/adventure2.css">
+    <title>Adventure Game</title>
+</head>
+
+<body>
+    <div id="transition"></div>
+
+    <div id="aboutTheGame">
+        <a id="aboutImg" href="/about-the-game"><img src="images/about.png" alt="about-the-game"></a>
+        <div id="imgTitle">
+            <div class="imgTitlePoint"></div>
+            <p>About the game</p>
+        </div>
+    </div>
+
+    <div id="information">
+        <div id="infoText">
+            <p>Adventure: <span id="adventure"></span></p>
+            <p>Name: <span id="adventurer"></span></p>
+            <p>Companion: <span id="companion"></span></p>
+            <p>Equipment: <span id="equipment"></span></p>
+        </div>
+        <img id="decor" src="images/decor.png" alt="decor.png">
+    </div>
+    <div class="story-container" id="storyBox">
+        <h1>Choose your adventure</h1>
+        <ul>
+            <li id="choice1">&nbsp;</li>
+            <li id="choice2">&nbsp;</li>
+            <li id="choice3">&nbsp;</li>
+            <li id="choice4">&nbsp;</li>
+        </ul>
+    </div>
+    <div class="backgroundLight"></div>
+    <div id="preview">
+        <div class="overlay">
+            <div id="previewImg">
+                <div class="wrapper">
+                    <div class="previewImg" id="ginro">
+                        <div id="ginro-container">
+                            <div class="ginrohead">
+                                <div class="ginrohair"></div>
+                                <div class="ginroear"></div>
+                                <div class="ginroear"></div>
+                                <div class="ginroneck"></div>
+                                <div class="ginroeye"></div>
+                                <div class="ginroeye"></div>
+                            </div>
+                            <div class="ginrobody">
+                                <div class="ginroarm-top"></div>
+                                <div class="ginroarm-top"></div>
+                                <div class="ginroarm-bottom"></div>
+                                <div class="ginroarm-bottom"></div>
+                                <div class="ginrohand"></div>
+                                <div class="ginrohand"></div>
+                                <div class="ginroleg-top"></div>
+                                <div class="ginroleg-top"></div>
+                                <div class="ginroleg-bottom"></div>
+                                <div class="ginroleg-bottom"></div>
+                                <div class="ginroboot">
+                                    <div class="ginroboottop"></div>
+                                    <div class="ginrobootband"></div>
+                                    <div class="ginrobootbottom"></div>
+                                </div>
+                                <div class="ginroboots">
+                                    <div class="ginroboottop"></div>
+                                    <div class="ginroboottop"></div>
+                                    <div class="ginrobootband"></div>
+                                    <div class="ginrobootband"></div>
+                                    <div class="ginrobootbottom"></div>
+                                    <div class="ginrobootbottom"></div>
+                                </div>
+                            </div>
+                            <div class="ginrobutton"></div>
+                            <div class="ginrobutton"></div>
+                            <div class="ginrobodyband"></div>
+                            <div class="ginrobodyband2"></div>
+                            <div class="ginrobodyband3"></div>
+                            <div class="ginrobodyband4"></div>
+                            <div class="ginroshoulder"></div>
+                            <div class="ginroshoulder2"></div>
+                            <div class="ginrobelt"></div>
+                            <div class="ginrobelt"></div>
+                            <div class="ginrobuckle"></div>
+                            <div class="ginrogun">
+                                <div class="gunWrapper">
+                                    <div class="gunBody">
+                                        <div class="detail"></div>
+                                        <div class="detail"></div>
+                                        <div class="detail"></div>
+                                    </div>
+                                    <div class="trigger"></div>
+                                    <div class="light"></div>
+                                    <div class="stock"></div>
+                                    <div class="laserBlock"></div>
+                                    <div class="laser"></div>
+                                    <div class="barrel"></div>
+                                    <div class="laserPoint"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Z-013" id="Z-013">
+                            <div id="zoie-container">
+                                <div class="zhead">
+                                    <div class="zeye"></div>
+                                    <div class="zeye"></div>
+                                    <div class="zmouth"></div>
+                                </div>
+                                <div class="zbody">
+                                    <div class="zneck"></div>
+                                    <div class="zarm-top"></div>
+                                    <div class="zarm-top"></div>
+                                    <div class="zarm-bottom"></div>
+                                    <div class="zarm-bottom"></div>
+                                    <div class="zhand"></div>
+                                    <div class="zhand"></div>
+                                    <div class="zleg-top"></div>
+                                    <div class="zleg-top"></div>
+                                    <div class="zleg-bottom"></div>
+                                    <div class="zleg-bottom"></div>
+                                    <div class="zfoot"></div>
+                                    <div class="zfoot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="previewImg" id="oviraptor">
+                        <div class="oviraptor-container">
+                            <div class="ovihead">
+                                <div class="oviheadtop"></div>
+                                <div class="ovitoppattern"></div>
+                                <div class="ovijaw"></div>
+                                <div class="ovijaw"></div>
+                                <div class="ovitongue"></div>
+                                <div class="ovieyeouter">
+                                    <div class="ovieyepattern"></div>
+                                    <div class="ovieyeinner"></div>
+                                </div>
+                            </div>
+                            <div class="ovibodytop">
+                                <div class="ovineck"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviarmtop"></div>
+                                <div class="oviarmbottom"></div>
+                                <div class="oviclaw"></div>
+                                <div class="oviclaw"></div>
+                                <div class="oviclaw"></div>
+                            </div>
+                            <div class="ovibodybottom">
+                                <div class="ovilegtop"></div>
+                                <div class="ovilegtop"></div>
+                                <div class="ovilegbottom"></div>
+                                <div class="ovilegbottom"></div>
+                                <div class="ovifoot"></div>
+                                <div class="ovifoot"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitail"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="previewImg" id="oviraptor">
+                        <div class="oviraptor-container">
+                            <div class="ovihead">
+                                <div class="oviheadtop"></div>
+                                <div class="ovitoppattern"></div>
+                                <div class="ovijaw"></div>
+                                <div class="ovijaw"></div>
+                                <div class="ovitongue"></div>
+                                <div class="ovieyeouter">
+                                    <div class="ovieyepattern"></div>
+                                    <div class="ovieyeinner"></div>
+                                </div>
+                            </div>
+                            <div class="ovibodytop">
+                                <div class="ovineck"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviarmtop"></div>
+                                <div class="oviarmbottom"></div>
+                                <div class="oviclaw"></div>
+                                <div class="oviclaw"></div>
+                                <div class="oviclaw"></div>
+                            </div>
+                            <div class="ovibodybottom">
+                                <div class="ovilegtop"></div>
+                                <div class="ovilegtop"></div>
+                                <div class="ovilegbottom"></div>
+                                <div class="ovilegbottom"></div>
+                                <div class="ovifoot"></div>
+                                <div class="ovifoot"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitail"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="previewImg" id="oviraptor">
+                        <div class="oviraptor-container">
+                            <div class="ovihead">
+                                <div class="oviheadtop"></div>
+                                <div class="ovitoppattern"></div>
+                                <div class="ovijaw"></div>
+                                <div class="ovijaw"></div>
+                                <div class="ovitongue"></div>
+                                <div class="ovieyeouter">
+                                    <div class="ovieyepattern"></div>
+                                    <div class="ovieyeinner"></div>
+                                </div>
+                            </div>
+                            <div class="ovibodytop">
+                                <div class="ovineck"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviwing"></div>
+                                <div class="oviarmtop"></div>
+                                <div class="oviarmbottom"></div>
+                                <div class="oviclaw"></div>
+                                <div class="oviclaw"></div>
+                                <div class="oviclaw"></div>
+                            </div>
+                            <div class="ovibodybottom">
+                                <div class="ovilegtop"></div>
+                                <div class="ovilegtop"></div>
+                                <div class="ovilegbottom"></div>
+                                <div class="ovilegbottom"></div>
+                                <div class="ovifoot"></div>
+                                <div class="ovifoot"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitoe"></div>
+                                <div class="ovitail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="continueBtn" disabled="true"><span>Continue &nbsp;»</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="placeholder"></div>
+    <footer>
+        <p>Copyright © <a href="https://wallerweave.com">Selma Waller</a> 2019</p>
+    </footer>
+    <script type="module" src="js/adventures.js"></script>
+</body>
+
+</html>

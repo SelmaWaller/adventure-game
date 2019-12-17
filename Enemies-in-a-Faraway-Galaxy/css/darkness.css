@@ -1,0 +1,300 @@
+#darkness {
+    position: absolute;
+    width: 290px;
+    height: 310px;
+    display: flex;
+    top: -10px;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: linear-gradient(30deg,#000000, #141414);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    display: none;
+    z-index: -2;
+}
+
+.space-back, .space-front {
+    position: absolute;
+    background: linear-gradient(30deg,#0f0f0fe5, #20202052);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    animation: gradientReverse 10s infinite ease-in-out;
+    height: 310px;
+    width: 290px;
+}
+
+.space-front {
+    background: linear-gradient(30deg,#1616163d, #1a1a1a54);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+}
+
+#spaceAnt {
+    display: none;
+}
+
+.ant-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    animation: ant 90s infinite linear;
+}
+
+@keyframes ant {
+    0%, 100% {transform: rotate(0) translateY(-80px) translateX(-40px);}
+    25% {transform: rotate(90deg) translateY(-80px) translateX(-10px);}
+    50% {transform: rotate(180deg) translateY(-90px) translateX(-10px);}
+    75% {transform: rotate(270deg) translateY(-80px) translateX(10px);}
+    100% {transform: rotate(360deg) translateY(-80px) translateX(-40px)}
+}
+
+.anthead  {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border-bottom-left-radius: 65%;
+    border-top-right-radius: 80%;
+    background: radial-gradient(#363636, #1a1a1a);
+    box-shadow: inset -1px -1px 10px #181818;
+    left: 71px;
+    top: 123px;
+    transform: scale(0.9);
+}
+
+.anteye {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 18px;
+    left: 20px;
+    background: radial-gradient(#ccc, #5c5c5c);
+    border-radius: 100%;
+    border-bottom-left-radius: 60%;
+    border-top-right-radius: 60%;
+    animation: anteyes 15s infinite;
+}
+
+@keyframes anteyes {
+    0%, 2%, 4%, 65%, 67%, 100% {box-shadow: inset -1px -1px 1px #3d3d3d;}
+    1%, 3%, 66% {box-shadow: inset 1px 20px 1px #3d3d3d;}
+}
+
+.anteye:nth-child(2) {
+    width: 3px;
+    height: 11px;
+    left: -1px;
+    background: radial-gradient(rgb(172, 172, 172), #5c5c5c);
+    top: 16px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: rotate(10deg);
+}
+
+.antlerinner {
+    position: absolute;
+    background: radial-gradient(#252525, #1a1a1a);
+    box-shadow: inset 0 -1px 2px #1f1f1f;
+    width: 5px;
+    height: 23px;
+    top: -12px;
+    left: 28px;
+    border-radius: 100%;
+    border-top-left-radius: 0;
+    transform: rotate(-20deg);
+}
+
+@keyframes antlers {
+    0%, 100% {box-shadow: 0 -3px 3px #97ffee;}
+    50% {box-shadow: 0 -3px 1px #90ffff00;}
+}
+
+.antlerinner:nth-child(4) {
+    background: radial-gradient(#242424, #1a1a1a);
+    left: 7px;
+    height: 15px;
+    top: -10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: rotate(-15deg);
+}
+
+.antlerouter {
+    position: absolute;
+    background: radial-gradient(#242424, #1a1a1a);
+    width: 2px;
+    height: 18px;
+    top: -24px;
+    left: 20px;
+    border-radius: 100%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    transform: rotate(-70deg);
+    animation: antlers 5s infinite;
+}
+
+.antlerouter:nth-child(6) {
+    left: 0px;
+    width: 2px;
+    top: -21px;
+    transform: rotate(-70deg);
+}
+
+.antbody {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    top: 170px;
+    left: 100px;
+}
+
+.antballfront {
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    top: -5px;
+    left: 12px;
+    border-radius: 100%;
+    border-bottom-right-radius: 60%;
+    border-top-left-radius: 30%;
+    background: radial-gradient(#272727, #1a1a1a);
+    transform: rotate(-10deg);
+}
+
+.antneck {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    top: -6px;
+    left: -5px;
+    border-radius: 60%;
+    border-bottom-left-radius: 100%;
+    background: radial-gradient(#00000000 45%, #1d1d1d 47%, #1b1b1b);
+    background-position: -7px;
+    transform: rotate(-25deg);
+    z-index: -5;
+}
+
+.frontlegtop, .middlelegtop, .backlegtop {
+    position: absolute;
+    width: 7px;
+    height: 35px;
+    top: 20px;
+    left: 15px;
+    background: radial-gradient(#242424, #1a1a1a);
+    box-shadow: inset 0 1px 1px #1f1f1f;
+    border-radius: 100%;
+    transform: rotate(30deg);
+}
+
+.frontlegtop:nth-child(2) {
+    width: 6px;
+    left: 0px;
+    top: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 20px;
+}
+
+.frontlegbottom, .middlelegbottom, .backlegbottom {
+    position: absolute;
+    width: 4px;
+    height: 15px;
+    top: 52px;
+    left: 8px;
+    background: radial-gradient(#242424, #1a1a1a);
+    box-shadow: inset 0 1px 1px #1f1f1f;
+    border-radius: 100%;
+}
+
+.frontlegbottom:nth-child(4) {
+    left: -4px;
+    top: 47px;
+}
+
+.antballmiddle {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: 40px;
+    top: 12px;
+    border-radius: 100%;
+    background: radial-gradient(#00000000 40%, #181818 42%, #333333);
+    background-position: 0 13px;
+    z-index: -1;
+    transform: rotate(20deg);
+}
+
+.antballback {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    right: 38px;
+    border-radius: 100%;
+    border-bottom-right-radius: 60%;
+    border-top-left-radius: 60%;
+    background: radial-gradient(#272727, #1a1a1a);
+    transform: rotate(-20deg);
+}
+
+.middlelegtop {
+    height: 35px;
+    width: 6px;
+    top: 11px;
+    left: 22px;
+    background: radial-gradient(#303030, #131313);
+    transform: rotate(-15deg);
+    z-index: 3;
+}
+
+.middlelegtop:nth-child(2) {
+    left: 15px;
+    width: 5px;
+    height: 24px;
+    top: 18px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transform: rotate(-10deg);
+}
+
+.middlelegbottom {
+    left: 32px;
+    top: 43px;
+    transform: rotate(-35deg);
+}
+
+.middlelegbottom:nth-child(4) {
+    left: 22px;
+    top: 40px;
+}
+
+.backlegtop {
+    top: 25px;
+    left: 15px;
+    transform: rotate(10deg);
+}
+
+.backlegtop:nth-child(2) {
+    width: 6px;
+    left: 5px;
+    top: 35px;
+    height: 20px;
+    border-top-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.backlegbottom {
+    top: 60px;
+    left: 14px;
+    transform: rotate(-5deg);
+}
+
+.backlegbottom:nth-child(4) {
+    top: 55px;
+    left: 5px;
+}

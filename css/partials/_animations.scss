@@ -1,0 +1,63 @@
+@keyframes fadeInfo {
+    0%, 60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes showRight {
+    from{transform: translateX(300px);}
+    to{transform: translateX(0);}
+}
+
+@keyframes enteringGameInfo {
+    0%, 50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes answerBox {
+    from{transform: translateY(0);}
+    to{transform: translateY(85px);}
+}
+
+@keyframes decor {
+    0%, 100%{opacity: 0.7;}
+    50% {opacity: 1;}
+}
+
+@keyframes title {
+    0%, 100%{color: rgba($game-white, 0.7);}
+    50%{color: rgba($game-white, 1);}
+}
+
+@keyframes enteringGame {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes hideLeft {
+    from{transform: translateX(0);}
+    to{transform: translateX(-300px);}
+}
+
+@keyframes hideRight {
+    from{transform: translateX(0);}
+    to{transform: translateX(300px);}
+}
+
+@keyframes gradient {
+    0%, 100% {background-position: 0% 100%;}
+    50% {background-position: 50% 50%;}
+}
+@keyframes gradientReverse {
+    0%, 100% {background-position: 100% 0%;}
+    50% {background-position: 0% 0%;}
+}
+
+@keyframes showPrev {
+    from{transform: translateX(-300px);}
+    to{transform: translateX(0);}
+}
+
+@keyframes continue {
+    0%, 100% {right: 20px;}
+    50% {right: 25px;}
+}

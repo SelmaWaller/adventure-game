@@ -1,0 +1,24 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: default;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 300;
+
+        p {
+            padding: 0 13px;
+            @include calcRem(14);
+            color: rgba($game-white, 0.4);
+        }
+
+        a {
+            @include calcRem(14);
+            color: rgba($game-white, 0.4);
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: rgba($game-white, 0.7);
+        }
+}

@@ -1,0 +1,93 @@
+#antiGrav {
+    position: absolute;
+    top: -10px;
+    width: 290px;
+    height: 310px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: linear-gradient(30deg,#ff4cb4b8, #448fffb8);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    animation: gradient 10s infinite ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.bootsContainer {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: laserGun 5s infinite ease-in-out;
+}
+
+.bootY {
+    bottom: 87px;
+    right: 23px;
+    position: absolute;
+    width: 57px;
+    height: 20px;
+    border-radius: 6px;
+    background: linear-gradient(-3deg, #bdbdbd 0%, #c4d6e0 50%);
+    box-shadow: inset -5px -10px 10px #000e163b, -5px 10px 20px #21212131;
+    transform: rotate(20deg);
+    z-index: 9;
+}
+
+.bootY:nth-child(2) {
+    width: 52px;
+    height: 17px;
+    top: 55px;
+    right: 71px;
+}
+
+.bootX {
+    position: absolute;
+    bottom: 40px;
+    right: 45px;
+    width: 110px;
+    height: 45px;
+    background: linear-gradient(-3deg, #00fff2 10%, #b2c2ca 30%);
+    box-shadow: inset -5px -10px 10px #000e163b, -5px 10px 20px #00fff231;
+    animation: boots 2.5s infinite;
+    border-top-left-radius: 90%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 15%;
+    transform: rotate(20deg);
+    z-index: 10;
+}
+
+@keyframes boots {
+    0%, 100%{box-shadow: inset -5px -10px 10px #000e163b, -5px 10px 20px #00fff263;}
+    50%{box-shadow: inset -5px -10px 10px #000e163b, -5px 10px 20px #00fff213;}
+}
+
+.bootX:nth-child(3) {
+    width: 105px;
+    height: 42px;
+    bottom: 84px;
+    right: 90px;
+}
+
+.band {
+    position: absolute;
+    width: 43px;
+    height: 40px;
+    bottom: 50px;
+    right: 40px;
+    background: linear-gradient(20deg, #0d9eb8, #8228e9);
+    box-shadow: inset -5px 0 10px #52b5c259;
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+.band:nth-child(5) {
+    width: 40px;
+    height: 37px;
+    top: 70px;
+    right: 86px;
+}

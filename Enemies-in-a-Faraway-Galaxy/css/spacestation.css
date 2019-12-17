@@ -1,0 +1,253 @@
+#spacestation {
+    position: absolute;
+    top: -10px;
+    width: 290px;
+    height: 310px;
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(30deg,#0e0e0e, #242424);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+    display: none;
+}
+
+.station-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+    width: 200px;
+    height: 200px;
+    transform: rotate(23deg);
+}
+
+.station {
+    position: absolute;
+    background: linear-gradient(#363636, #535353, #363636);
+    height: 30px;
+    width: 180px;
+    border-radius: 30px;
+}
+
+.station-wing {
+    position: absolute;
+    width: 13px;
+    height: 4px;
+    top: 13px;
+    left: -13px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background: linear-gradient(#6e6e6e, #4b4b4b);
+}
+
+.station-wing:nth-child(2) {
+    left: 180px;
+    transform: scaleX(-1);
+}
+
+.station-circle {
+    position: absolute;
+    width: 0;
+    height: 15px;
+    top: 7px;
+    left: -14px;
+    background: radial-gradient(#6e6e6e, #4b4b4b);
+    box-shadow: 0 0 10px #3a3a3a9a;
+}
+
+.station-circle:nth-child(4) {
+    left: 193px;
+}
+
+.station-circle:nth-child(5), .station-circle:nth-child(6), .station-circle:nth-child(7) {
+    width: 13px;
+    left: 25px;
+    border-radius: 100%;
+}
+
+.station-circle:nth-child(6) {
+    left: 83px;
+}
+
+.station-circle:nth-child(7) {
+    left: 142px;
+}
+
+.station-light {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: aquamarine;
+    box-shadow: 0 0 5px aquamarine;
+    animation: stationlight 1.5s infinite;
+}
+
+@keyframes stationlight {
+    0%, 100% {opacity: 1;}
+    30%, 60% {opacity: 0.3;}
+}
+
+.station-top, .station-middle, .station-bottom {
+    position: absolute;
+    left: 10px;
+}
+
+.station-top {
+    top: 64px;
+    left: 45px;
+    transform: scale(0.6) rotate(4deg) translateY(10px);
+}
+
+.station-middle {
+    transform: translateY(-4px) rotate(-2deg);
+    animation-delay: 200ms;
+}
+
+.station-bottom {
+    transform: scale(0.4);
+    top: 160px;
+    left: 63px;
+    transform: scale(0.4) translateY(-20px);
+}
+
+.station-top .station-connector {
+    position: absolute;
+    width: 175px;
+    height: 2px;
+    top: 44px;
+    left: 2px;
+    background: #ffffff;
+    box-shadow: 0 0 10px 1px aquamarine;
+    animation: magnet 2s infinite;
+}
+
+@keyframes magnet {
+    0%, 100% {box-shadow: 0 0 10px 1px aquamarine;}
+    50% {box-shadow: 0 0 10px 1px rgb(243, 181, 255);}
+}
+
+.station-middle .station-connector {
+    position: absolute;
+    width: 130px;
+    height: 1px;
+    top: 45px;
+    left: 25px;
+    background: #ffffff;
+    box-shadow: 0 0 10px 2px aquamarine;
+    animation: magnet 7s infinite;
+}
+
+.station-top .station-wing, .station-bottom .station-wing, 
+.station-top .station-circle, .station-bottom .station-circle, .station-top .first, .station-bottom .first, .station-top .second, .station-bottom .second {
+    box-shadow: none;
+    background: none;
+}
+
+.station-top .station {
+    background: linear-gradient(#363636, #535353, #363636);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.station-bottom .station {
+    background: linear-gradient(#363636, #535353, #363636);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.first {left: -5px; animation-delay: 100ms; }
+.second {animation-delay: 500ms;}
+.third {animation-delay: 200ms;}
+.fourth {animation-delay: 300ms;}
+.fifth {animation-delay: 400ms;}
+
+.crash {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 125px;
+    top: 70px;
+    border-radius: 100%;
+    background: radial-gradient(#e7700096, #ffa6003a 30%, #ffbb001c 40%, #00000000 60%);
+    animation: explosion 5s infinite linear;
+}
+
+@keyframes explosion {
+    0%, 15%, 35%, 55%, 75%, 100% {transform: scale(0); opacity: 0;}
+    5%, 25%, 45%, 65%, 85% {transform: scale(1); opacity: 1;}
+}
+
+.crash:nth-child(4) {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    left: 110px;
+    background: radial-gradient(#ff910096, #ffd0003a 30%, #ffd0001c 40%, #00000000 60%);
+    animation-delay: 150ms;
+}
+
+.crash:nth-child(5), .crash:nth-child(6) {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    left: 105px;
+    top: 65px;
+    background: radial-gradient(#1d1d1db2, #3030306e 30%, #3535351c 40%, #00000000 60%);
+    animation-delay: 300ms;
+    z-index: 1;
+}
+
+.crash:nth-child(6) {
+    left: 130px;
+    animation-delay: 450ms;
+}
+
+.ship {
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background: #afafaf;
+    box-shadow: inset 3px -8px 8px #7e7e7e;
+    top: -10px;
+    left: 122px;
+    border-radius: 100%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    transform: rotate(-23deg) translateY(0);
+}
+
+.shipwing {
+    position: absolute;
+    width: 14px;
+    height: 6px;
+    left: 27px;
+    top: -5px;
+    z-index: -1;
+    border-top-left-radius: 100%;
+    background: linear-gradient(to right, #9d1da1 30%, #1bc2b4);
+    box-shadow: inset -2px 2px 3px #7e7e7e;
+}
+
+.shipwing:nth-child(2) {
+    transform: scaleY(-1);
+    box-shadow: inset -2px -2px 3px #6d6d6d;
+    top: 14px;
+}
+
+.shipmark {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, #bc12c2 40%, #00ffea 110%);
+    top: 7px;
+    left: 10px;
+}

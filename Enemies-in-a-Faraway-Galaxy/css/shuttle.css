@@ -1,0 +1,247 @@
+#shuttle {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 290px;
+    height: 310px;
+    top: -10px;
+    display: none;
+}
+
+.shuttle-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    box-shadow: 0 0 20px 5px #252525b9;
+    background: radial-gradient(#00000000 60%, #22222275 65%, #2b2b2b 67%);
+    overflow: hidden;
+    z-index: 3;
+}
+
+.window-container {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: rgb(19, 19, 19);
+    z-index: -1;
+}
+
+.star {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    background: #a7a7a7;
+    box-shadow: 0 0 3px #a7a7a7;
+    animation: laserLight 1s infinite, stars 30s infinite;
+}
+
+@keyframes stars {
+    0%, 100% {transform: translateY(0) translateX(0);}
+    50% {transform: translateY(20px) translateX(10px);}
+}
+
+.star:nth-child(2) {
+    left: 110px;
+    top: 45px;
+    animation-delay: 200ms;
+}
+
+.star:nth-child(3) {
+    left: 55px;
+    top: 45px;
+    animation-delay: 200ms;
+}
+
+.star:nth-child(4) {
+    left: 90px;
+    top: 5px;
+    animation-delay: 400ms;
+}
+
+.star:nth-child(5) {
+    left: 10px;
+    top: 65px;
+    animation-delay: 400ms;
+}
+
+.star:nth-child(6) {
+    left: 138px;
+    top: 35px;
+    animation-delay: 200ms;
+}
+
+.star:nth-child(7) {
+    left: 76px;
+    top: 78px;
+    animation-delay: 400ms;
+}
+
+.dashboard {
+    position: absolute;
+    width: 160px;
+    height: 70px;
+    top: 85px;
+    background: linear-gradient(#000000 0%, #666666 5%, #2c2c2c 85%);
+}
+
+.coordinates {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    top: 10px;
+    left: 60px;
+    border-radius: 3px;
+    background: linear-gradient(150deg, #111, #212121);
+    box-shadow: 0 0 3px #111;
+    overflow: hidden;
+}
+
+
+.input {
+    color: #23d37b;
+    font-family: 'VT323', sans-serif;
+    font-size: 15px;
+    margin-left: 1px;
+    margin-top: -12px;
+    animation: coordinates 3s infinite linear;
+}
+
+@keyframes coordinates {
+    0% {margin-top: -11px;}
+    100% {margin-top: -56px;}
+}
+
+.inputshadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 22px;
+    box-shadow: inset -1px 0 5px 3px #111111;
+}
+
+.dblight {
+    position: absolute;
+    left: 46px;
+    top: 12px;
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    background: #1fffce;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #00f0bc;
+    animation: dblight 1s infinite;
+    opacity: 0;
+}
+
+@keyframes dblight {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+}
+
+.dblight:nth-child(2) {
+    left: 31px;
+    top: 12px;
+    background: #1fff6a;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #1fff6a;
+    animation-delay: 200ms;
+}
+
+.dblight:nth-child(3) {
+    left: 16px;
+    top: 12px;
+    background: #ff84f9;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #ff84f9;
+    animation-delay: 600ms;
+}
+
+.dblight:nth-child(4) {
+    left: 46px;
+    top: 22px;
+    background: #ff84f9;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #ff84f9;
+    animation-delay: 500ms;
+}
+
+.dblight:nth-child(5) {
+    left: 31px;
+    top: 22px;
+    background: #1fff6a;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #1fff6a;
+    animation-delay: 100ms;
+}
+
+.dblight:nth-child(6) {
+    left: 23px;
+    top: 22px;
+    background: #1fff6a;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #1fff6a;
+    animation-delay: 400ms;
+}
+
+.dblight:nth-child(7) {
+    left: 108px;
+    top: 12px;
+    background: #1fff6a;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #1fff6a;
+    animation-delay: 800ms;
+}
+
+.dblight:nth-child(8) {
+    left: 123px;
+    top: 12px;
+    background: #1fff6a;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #1fff6a;
+    animation-delay: 600ms;
+}
+
+.dblight:nth-child(9) {
+    left: 133px;
+    top: 12px;
+    animation-delay: 100ms;
+}
+
+.dblight:nth-child(10) {
+    left: 108px;
+    top: 22px;
+    animation-delay: 200ms;
+}
+
+.dblight:nth-child(11) {
+    left: 118px;
+    top: 22px;
+    background: #1fff6a;
+    box-shadow: inset 0 0 2px #212121, 0 0 3px #1fff6a;
+    animation-delay: 400ms;
+}
+
+.dblight:nth-child(12) {
+    left: 133px;
+    top: 22px;
+    background: #ff84f9;
+    box-shadow: inset 0 0 2px #212121, 0 0 5px #ff84f9;
+    animation-delay: 800ms;
+}
+
+.seat {
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    left: -10px;
+    top: 36px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #1b1b1b,#222222, #1b1b1b);
+    background-size: 100% 30%;
+    box-shadow: inset -5px 5px 15px #141414e7, 0 0 10px #161616ad;
+}
+
+.seat:nth-child(14) {
+    left: 89px;
+    box-shadow: inset 5px 5px 15px #141414e7, 0 0 10px #161616ad;
+}

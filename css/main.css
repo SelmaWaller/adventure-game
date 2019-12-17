@@ -1,0 +1,489 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Signika+Negative:400,700|VT323|&display=swap");
+#aboutTheGame {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+#aboutTheGame img {
+  float: right;
+  width: 30px;
+  opacity: 0.6;
+  transition: 200ms;
+}
+#aboutTheGame img:hover {
+  opacity: 0.8;
+}
+#aboutTheGame #imgTitle {
+  background: #111;
+  padding: 10px 5px 10px 10px;
+  width: 100px;
+  border-radius: 3px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 0.875rem;
+  box-shadow: 0 0 10px rgba(17, 17, 17, 0.5);
+  top: 0;
+  right: 48px;
+  position: absolute;
+  transition: 200ms;
+  opacity: 0;
+}
+#aboutTheGame #imgTitle p {
+  margin: 0;
+}
+#aboutTheGame #imgTitle .imgTitlePoint {
+  position: absolute;
+  border-style: solid;
+  top: 13px;
+  right: -12px;
+  transform: rotate(90deg);
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent #111 transparent;
+}
+
+#aboutTheGame:hover #imgTitle {
+  opacity: 1;
+}
+
+.about-container {
+  box-shadow: 0 0 10px #111;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 300px;
+  max-height: 300px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #111;
+  padding: 10px 0 0;
+  position: relative;
+  transition: 200ms;
+  z-index: 9;
+  animation: enteringGame 0.7s ease-in;
+}
+.about-container p {
+  font-size: 1.125rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 400;
+  list-style: none;
+  cursor: default;
+  margin: 10px 0;
+}
+.about-container #back {
+  position: relative;
+  top: 40px;
+  left: 20px;
+  text-decoration: none;
+  font-family: "Permanent Marker", sans-serif;
+  color: rgba(231, 231, 231, 0.8);
+  font-size: 1.0625rem;
+}
+.about-container #back span::before {
+  content: "«";
+  position: absolute;
+  left: -19px;
+  top: -1px;
+  transition: 200ms;
+}
+.about-container #back:hover span::before {
+  left: -26px;
+}
+.about-container #github {
+  position: relative;
+  top: 40px;
+  left: 100px;
+  text-decoration: none;
+  font-family: "Permanent Marker", sans-serif;
+  color: rgba(231, 231, 231, 0.8);
+  font-size: 1.0625rem;
+}
+.about-container #github span::after {
+  content: "»";
+  position: absolute;
+  right: -19px;
+  top: -1px;
+  transition: 200ms;
+}
+.about-container #github:hover span::after {
+  right: -26px;
+}
+
+body {
+  margin: 0;
+  background: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: rgba(231, 231, 231, 0.7);
+  z-index: -99;
+  cursor: default;
+}
+
+.row::after {
+  clear: both;
+  content: "";
+}
+
+#information {
+  position: relative;
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 290px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 10px;
+  background: linear-gradient(-30deg, #6a54e9, #1be0c0);
+  background-size: 150% 150%;
+  background-position: 0% 100%;
+  animation: gradient 10s infinite ease-in-out;
+  transform: translateX(300px);
+  animation: enteringGameInfo 1.9s ease-in;
+}
+#information p {
+  color: rgba(17, 17, 17, 0.8);
+  font-size: 1.125rem;
+  cursor: default;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 400;
+  margin: 10px 0 10px 5px;
+}
+#information #infoText {
+  animation: fadeInfo 800ms ease;
+  display: none;
+}
+#information span {
+  font-size: 1.0625rem;
+  font-family: "Permanent Marker", sans-serif;
+}
+
+#decor {
+  position: absolute;
+  top: -111px;
+  left: -20px;
+  transform: rotate(-30deg);
+  width: 60px;
+  animation: decor 5s infinite;
+}
+
+.story-container {
+  box-shadow: 0 0 10px #111;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 300px;
+  max-height: 300px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #111;
+  padding: 10px 0 0;
+  position: relative;
+  transition: 200ms;
+  z-index: 9;
+  animation: enteringGame 0.7s ease-in;
+}
+.story-container h1 {
+  font-size: 1.375rem;
+  cursor: default;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 900;
+  margin: 10px 0 20px;
+  padding: 0 20px;
+  animation: title 3s infinite ease-in-out;
+}
+.story-container ul {
+  padding: 0 0 0 20px;
+}
+.story-container ul li {
+  font-size: 1.125rem;
+  padding: 10px 20px 10px 0;
+  cursor: pointer;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 400;
+  list-style: none;
+}
+.story-container li:hover {
+  color: #e7e7e7;
+}
+
+#placeholder {
+  position: relative;
+  min-width: 250px;
+  min-height: 300px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 10px 20px 0;
+  z-index: -9;
+  transform: translateX(-300px);
+}
+
+#preview {
+  min-width: 250px;
+  min-height: 300px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: rgba(17, 17, 17, 0.5);
+  padding: 10px 20px 0;
+  position: relative;
+  transition: 200ms;
+  animation: showPrev 0.4s ease;
+  font-family: "Permanent Marker", sans-serif;
+  display: none;
+  z-index: -9;
+}
+#preview .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: linear-gradient(30deg, #ff4cb4, #448fff);
+  background-size: 200% 200%;
+  background-position: 0% 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: gradient 10s infinite ease-in-out;
+}
+#preview .overlay img {
+  transition: 200ms;
+  transform: translate(26%, 26%);
+}
+
+#continueBtn {
+  font-family: "Permanent Marker", sans-serif;
+  background: none;
+  color: rgba(17, 17, 17, 0.8);
+  font-size: 1.125rem;
+  border-color: rgba(17, 17, 17, 0);
+  border-radius: 4px;
+  right: 20px;
+  bottom: 5px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  animation: fadeIn 1.5s ease;
+}
+
+#continueBtn:hover {
+  color: #111;
+}
+
+#transition {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: newPage 500ms;
+  background: #000;
+  z-index: 99;
+  pointer-events: none;
+  display: none;
+}
+
+@keyframes newPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInfo {
+  0%, 60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showRight {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes enteringGameInfo {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes answerBox {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(85px);
+  }
+}
+@keyframes decor {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes title {
+  0%, 100% {
+    color: rgba(231, 231, 231, 0.7);
+  }
+  50% {
+    color: #e7e7e7;
+  }
+}
+@keyframes enteringGame {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@keyframes hideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+}
+@keyframes gradientReverse {
+  0%, 100% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes showPrev {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes continue {
+  0%, 100% {
+    right: 20px;
+  }
+  50% {
+    right: 25px;
+  }
+}
+#leaveAdventure {
+  background: linear-gradient(120deg, #69cae7d7, #809fe2d7);
+  border: none;
+  padding: 3px 6px;
+  color: rgba(17, 17, 17, 0.8);
+  border-radius: 4px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  top: -40px;
+  left: 63px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+#leaveAdventure:hover {
+  color: #111;
+  transition: 200ms;
+  background: linear-gradient(120deg, #59c4e4, #7395e0);
+  box-shadow: 0 0 7px #88d3ff6c;
+}
+
+.theEnd {
+  font-family: "Permanent Marker", sans-serif;
+  background: none;
+  color: rgba(231, 231, 231, 0.8);
+  font-size: 1.125rem;
+  border-color: rgba(17, 17, 17, 0);
+  border-radius: 4px;
+  right: 45px;
+  bottom: 25px;
+  width: 170px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  animation: fadeIn 1.5s ease;
+  display: none;
+}
+
+.theEnd:hover {
+  color: #e7e7e7;
+}
+
+.theEnd:nth-child(3) {
+  left: 70px;
+  bottom: 25px;
+}
+
+#tryAgain span::before {
+  content: "«";
+  position: absolute;
+  left: -5px;
+  top: -2px;
+  transition: 200ms;
+}
+
+#tryAgain:hover span::before {
+  left: -12px;
+}
+
+#newAdventure span::after {
+  content: "»";
+  position: absolute;
+  right: 20px;
+  top: -2px;
+  transition: 200ms;
+}
+
+#newAdventure:hover span::after {
+  right: 13px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 300;
+}
+footer p {
+  padding: 0 13px;
+  font-size: 0.875rem;
+  color: rgba(231, 231, 231, 0.4);
+}
+footer a {
+  font-size: 0.875rem;
+  color: rgba(231, 231, 231, 0.4);
+  cursor: pointer;
+}
+footer a:hover {
+  color: rgba(231, 231, 231, 0.7);
+}
+
+/*# sourceMappingURL=main.css.map */

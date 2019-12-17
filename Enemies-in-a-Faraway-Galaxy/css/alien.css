@@ -1,0 +1,364 @@
+#alien {
+    position: absolute;
+    top: -10px;
+    width: 290px;
+    height: 310px;
+    display: none;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.alien-container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    left: -30px;
+    top: 3px;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.89);
+}
+
+.alienhead {
+    position: absolute;
+    top: -3px;
+    right: 2px;
+    width: 31px;
+    height: 50px;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 170%;
+    border-bottom-right-radius: 150%;
+    background: radial-gradient(#77a8a7 10%, #004246 80%);
+    box-shadow: inset 0 0 20px #13131398, 0 3px 7px #000000fa;
+}
+
+.aliencape {
+    position: absolute;
+    left: -21px;
+    bottom: -24px;
+    width: 70px;
+    height: 55px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: radial-gradient(#00000000 40%, #0e0e0e 42%, #050505 52%, #050505 52%, #52787a 93%);
+    background-position: -33px 0;
+    z-index: -1;
+}
+
+.alieneye {
+    position: absolute;
+    top: 16px;
+    left: 21px;
+    width: 10px;
+    height: 14px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 100%;
+    transform: rotate(30deg);
+    background: radial-gradient(#aeeee5 10%, #2c5344);
+    box-shadow: inset 0 0 2px 1px #263d34, 0 0 5px #0e2424dc;
+    animation: alieneye 2s infinite;
+    z-index: 1;
+}
+
+@keyframes alieneye {
+    0%, 100% {
+        background: radial-gradient(#aeeee5 10%, #2c5344);
+        box-shadow: inset 0 0 2px 1px #263d34, 0 0 5px #0e2424dc;
+    }
+
+    50% {
+        background: radial-gradient(#aeeee5 10%, #2c5344);
+        box-shadow: inset 0 0 3px 1px #3b6353, 0 0 5px #0e2424dc;
+    }
+}
+
+.alieneye:nth-child(3) {
+    left: 1px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 100%;
+    transform: rotate(-30deg);
+}
+
+.alienheadpattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 31px;
+    height: 50px;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 170%;
+    border-bottom-right-radius: 150%;
+    box-shadow: inset 0 -5px 5px #0000006b;
+    z-index: 0;
+}
+
+.alienbody {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    right: -9px;
+    top: 59px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background: radial-gradient(#181818, #000000);
+    transform: scale(1.08);
+}
+
+.alienarm-top {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    left: -17px;
+    background: radial-gradient(#131313, #000000);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 15px;
+    transform: rotate(5deg);
+    box-shadow: -3px 5px 20px #11111175;
+}
+
+.alienarm-top:nth-child(2) {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    transform: rotate(-10deg);
+    left: 45px;
+}
+
+.alienarm-bottom {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    top: 55px;
+    left: -21px;
+    background: radial-gradient(#131313, #000000);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 150%;
+    transform: rotate(-5deg);
+    box-shadow: -3px 5px 20px #11111175;
+}
+
+.alienarm-bottom:nth-child(3) {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 0;
+    transform: rotate(3deg);
+    width: 19px;
+    top: 54px;
+    left: 53px;
+}
+
+.alienhand {
+    position: absolute;
+    top: 108px;
+    width: 26px;
+    height: 12px;
+    left: -27px;
+    border-right: rgb(19, 19, 19) 1px solid;
+    background: radial-gradient(#548a8a 10%, #203c3d 80%);
+    background-size: 105% 105%;
+    background-position: -2px -1px;
+    box-shadow: inset 0 0 20px #00000052, -3px 5px 20px #11111175;
+    border-bottom-left-radius: 27%;
+    border-bottom-right-radius: 40%;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 10%;
+    transform: rotate(-90deg);
+    z-index: -9;
+}
+
+.alienhand:nth-child(5) {
+    left: 52px;
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.alienleg-top {
+    bottom: -90px;
+    position: absolute;
+    width: 29px;
+    height: 100px;
+    left: -3px;
+    background: radial-gradient(#131313, #000000);
+    border-top-left-radius: 80%;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 100%;
+    z-index: -9;
+    box-shadow: -3px 5px 20px #11111175;
+}
+
+.alienleg-top:nth-child(7) {
+    transform: scaleX(-1);
+    left: 25px;
+}
+
+.alienleg-bottom {
+    bottom: -151px;
+    position: absolute;
+    width: 20px;
+    height: 75px;
+    left: 0;
+    background: radial-gradient(#131313, #050505);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 150%;
+    z-index: -9;
+    box-shadow: -3px 5px 20px #11111175;
+}
+
+.alienleg-bottom:nth-child(9) {
+    width: 18px;
+    left: 34px;
+    bottom: -152px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 30%;
+}
+
+.alienfoot {
+    position: absolute;
+    width: 14px;
+    left: -10px;
+    height: 33px;
+    bottom: -174px;
+    background: radial-gradient(#333333, #100013);
+    border-top-left-radius: 0%;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 100%;
+    box-shadow: -3px 5px 20px #11111175;
+    transform: rotate(60deg);
+}
+
+.alienfoot:nth-child(11) {
+    bottom: -165px;
+    left: 38px;
+    height: 17px;
+    width: 20px;
+    border-radius: 0;
+    border-bottom-left-radius: 100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: rotate(50deg);
+}
+
+.cloakbutton {
+    position: absolute;
+    top: 54px;
+    right: -14px;
+    width: 10px;
+    height: 7px;
+    background: radial-gradient(#c4c4c4, #2e2e2e);
+    box-shadow: inset 0 1px 3px black;
+    border-radius: 100%;
+    transform: rotate(20deg);
+    z-index: 9;
+}
+
+.cloakbutton:nth-child(3) {
+    right: 36px;
+    transform: rotate(-20deg);
+}
+
+.aliennecklace {
+    width: 60px;
+    height: 30px;
+    right: -14px;
+    top: 43px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 1px 0px #555555;
+}
+
+.aliennecklace2 {
+    width: 52px;
+    height: 30px;
+    right: -10px;
+    top: 48px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset 0 -1px 1px 0px #313131;
+}
+
+.aliencloak {
+    left: 85px;
+    top: 70px;
+    width: 90px;
+    height: 210px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    background: linear-gradient(to left, #b100a87a, #ff73007a, #b100a87a);
+    box-shadow: -3px 5px 20px #ef7aff28, inset 0 0 30px #ffffff00;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    position: relative;
+    z-index: -999;
+    animation: cloak 2s infinite;
+    animation-delay: 500ms;
+}
+
+@keyframes cloak {
+    0%, 100% {box-shadow: -3px 5px 20px #ef7aff28, inset 0 0 30px #ffffff00;}
+    50% {box-shadow: -3px 5px 20px #ef7aff28, inset 0 0 30px #ffffff42;}
+}
+
+.alienshoulder, .alienshoulder2 {
+    position: absolute;
+    top: 54px;
+    right: -30px;
+    width: 25px;
+    height: 15px;
+    background: radial-gradient(#535353, #1b1b1b);
+    box-shadow: inset 0 2px 5px black, -3px 5px 20px #11111175;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 5px;
+    transform: rotate(10deg);
+}
+
+.alienshoulder2 {
+    transform: rotate(-10deg) scaleX(-1);
+    right: 38px;
+}
+
+.alienbelt {
+    bottom: 60px;
+    right: -12px;
+    width: 56px;
+    height: 15px;
+    border-radius: 3px;
+    background: linear-gradient(to left, #1b1b1b, #474747, #a3a3a3, #474747, #1b1b1b);
+    box-shadow: inset 0 0 10px black;
+    position: absolute;
+}
+
+.alienbuckle {
+    position: absolute;
+    bottom: 61px;
+    right: 11px;
+    width: 8px;
+    height: 13px;
+    background: radial-gradient(#fcacff, #2e2e2e);
+    box-shadow: inset 0 1px 3px black, 0 0 20px #fcacff;
+    border-radius: 100%;
+    z-index: 9;
+    animation: gem 2s infinite;
+}
+
+@keyframes gem {
+    0%, 100% {box-shadow: inset 0 1px 3px black, 0 0 20px #fcacff;}
+    50% {box-shadow: inset 0 1px 3px black, 0 0 20px 2px #fca7ff;}
+}
