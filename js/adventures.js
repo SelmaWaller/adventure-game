@@ -37,7 +37,7 @@ for (let i = 0; i <= 3; i++) {
             setup.continueBtn.onclick = () => {
                 document.getElementById('transition').style.display = 'block';
                 setTimeout(() => {
-                    window.location = '../adventure-game/' + localStorage.getItem('adventure').split(' ').join('-');
+                    window.location = '../' + localStorage.getItem('adventure').split(' ').join('-');
                 }, 1000)
             };
         };
