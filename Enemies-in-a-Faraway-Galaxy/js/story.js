@@ -71,11 +71,13 @@ let card1 = {
     1: `Blame the space ants and shed a tear for your ship`,
     2: `Live with the guilt for the rest of your life`
 }, card11 = {
-    line: `A glowing object fills the shuttle with light and interrupts your deep thoughts. You look up, and what you see is your beautiful home planet. You made it!`,
+    line: `A glowing object fills the shuttle with light and interrupts your deep thoughts. You look up and see your beautiful home planet welcoming you. You made it!`,
     1: `       `,
     2: `       `
 }
 
-export default {card1, card2_1, card2_2, card3, card4_1, card4_2, 
-card5_1_1, card5_1_2, card5_2_1, card5_2_2, card6_1_1, card6_1_2, 
-card6_2_1, card6_2_2, card7, card8, card9, card10, card11}
+export default {
+    card1, card2_1, card2_2, card3, card4_1, card4_2,
+    card5_1_1, card5_1_2, card5_2_1, card5_2_2, card6_1_1, card6_1_2,
+    card6_2_1, card6_2_2, card7, card8, card9, card10, card11
+}
