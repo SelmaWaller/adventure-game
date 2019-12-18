@@ -10,6 +10,7 @@
   width: 30px;
   opacity: 0.6;
   transition: 200ms;
+  cursor: pointer;
 }
 #aboutTheGame img:hover {
   opacity: 0.8;
@@ -45,68 +46,97 @@
   opacity: 1;
 }
 
+#aboutContent {
+  position: absolute;
+  background: rgba(17, 17, 17, 0.7);
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: aboutGame 500ms;
+  z-index: 100;
+}
+
+@keyframes aboutGame {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .about-container {
+  position: absolute;
   box-shadow: 0 0 10px #111;
   min-width: 500px;
   max-width: 500px;
   min-height: 300px;
   max-height: 300px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background: #111;
-  padding: 10px 0 0;
-  position: relative;
+  border-radius: 3px;
+  background: linear-gradient(30deg, #42cbd4, #e7f158);
+  background-size: 150% 150%;
+  background-position: 50% 150%;
+  animation: gradient 10s infinite ease-in-out;
+  padding: 20px 0 0;
   transition: 200ms;
-  z-index: 9;
-  animation: enteringGame 0.7s ease-in;
+}
+.about-container #closeAbout {
+  right: 7px;
+  top: 7px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 100%;
+  z-index: 9999;
+}
+.about-container #closeAbout .cross {
+  position: absolute;
+  width: 3px;
+  height: 25px;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  transform: rotate(43deg);
+  top: 3px;
+  right: 15px;
+  background: rgba(17, 17, 17, 0.7);
+}
+.about-container #closeAbout .cross:nth-child(2) {
+  transform: rotate(-43deg) scaleX(-1);
+}
+.about-container #closeAbout:hover .cross {
+  background: #111;
 }
 .about-container p {
-  font-size: 1.125rem;
-  padding: 10px 20px;
+  font-size: 1rem;
+  padding: 0 60px 0 30px;
   cursor: pointer;
   font-family: "Signika Negative", sans-serif;
   font-weight: 400;
   list-style: none;
   cursor: default;
-  margin: 10px 0;
-}
-.about-container #back {
-  position: relative;
-  top: 40px;
-  left: 20px;
-  text-decoration: none;
-  font-family: "Permanent Marker", sans-serif;
-  color: rgba(231, 231, 231, 0.8);
-  font-size: 1.0625rem;
-}
-.about-container #back span::before {
-  content: "«";
-  position: absolute;
-  left: -19px;
-  top: -1px;
-  transition: 200ms;
-}
-.about-container #back:hover span::before {
-  left: -26px;
+  margin: 10px 0 0;
+  color: rgba(17, 17, 17, 0.8);
 }
 .about-container #github {
   position: relative;
-  top: 40px;
-  left: 100px;
+  top: 20px;
+  left: 0;
   text-decoration: none;
   font-family: "Permanent Marker", sans-serif;
-  color: rgba(231, 231, 231, 0.8);
+  color: rgba(17, 17, 17, 0.8);
   font-size: 1.0625rem;
 }
 .about-container #github span::after {
   content: "»";
   position: absolute;
-  right: -19px;
+  right: -16px;
   top: -1px;
   transition: 200ms;
 }
 .about-container #github:hover span::after {
-  right: -26px;
+  right: -21px;
 }
 
 body {
@@ -392,6 +422,10 @@ body {
     right: 25px;
   }
 }
+#mobileDevice {
+  display: none;
+}
+
 #leaveAdventure {
   background: linear-gradient(120deg, #69cae7d7, #809fe2d7);
   border: none;
@@ -484,6 +518,120 @@ footer a {
 }
 footer a:hover {
   color: rgba(231, 231, 231, 0.7);
+}
+
+@media only screen and (max-width: 1200px) {
+  #information, .story-container, #preview, #placeholder, .prevImg, .hide {
+    display: none;
+  }
+
+  footer p, footer a {
+    color: rgba(231, 231, 231, 0.8);
+  }
+
+  #mobileDevice {
+    position: absolute;
+    background: linear-gradient(-30deg, #6a54e9, #1be0c0);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    animation: gradient 10s infinite ease-in-out;
+    display: block;
+    max-width: 155px;
+    max-height: 75px;
+    min-height: 75px;
+    left: 230px;
+    bottom: 320px;
+    padding: 0 10px 5px;
+    border-radius: 60px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -3px 5px 15px rgba(17, 17, 17, 0.2);
+    z-index: 99;
+  }
+  #mobileDevice h3 {
+    color: rgba(17, 17, 17, 0.8);
+    font-size: 1.0625rem;
+    cursor: default;
+    font-family: "VT323", sans-serif;
+    font-weight: 400;
+    margin: 15px 0 10px 10px;
+  }
+  #mobileDevice #ginro {
+    width: 200px;
+    left: -130px;
+    top: 80px;
+    background: none;
+    display: flex;
+  }
+  #mobileDevice .ginrohidden {
+    transform: scale(0.88);
+    width: 200px;
+    margin-left: -33px;
+    top: 80px;
+    display: flex;
+  }
+}
+@media only screen and (max-width: 550px) {
+  body {
+    background: linear-gradient(30deg, #ff4cb4, #448fff);
+    background-size: 200% 200%;
+    background-position: 0% 100%;
+    animation: gradient 10s infinite ease-in-out;
+    max-height: 110vh;
+  }
+
+  footer p, footer a {
+    color: rgba(17, 17, 17, 0.8);
+  }
+
+  .about-container {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    min-height: 360px;
+    max-height: unset;
+    min-width: 150px;
+    transform: scale(0.75);
+    font-size: 1.25rem;
+    box-shadow: 0 0 15px rgba(17, 17, 17, 0.2);
+  }
+
+  #mobileDevice {
+    position: absolute;
+    background: linear-gradient(-30deg, #6a54e9, #1be0c0);
+    background-size: 150% 150%;
+    background-position: 0% 100%;
+    animation: gradient 10s infinite ease-in-out;
+    display: block;
+    max-width: 155px;
+    left: 130px;
+    bottom: 320px;
+    padding: 0 10px 5px;
+    border-radius: 60px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -3px 5px 15px rgba(17, 17, 17, 0.2);
+    z-index: 99;
+  }
+  #mobileDevice h3 {
+    color: rgba(17, 17, 17, 0.8);
+    font-size: 1.0625rem;
+    cursor: default;
+    font-family: "VT323", sans-serif;
+    font-weight: 400;
+    margin: 15px 0 10px 10px;
+  }
+  #mobileDevice #ginro {
+    width: 200px;
+    left: -130px;
+    top: 80px;
+    background: none;
+    display: flex;
+  }
+  #mobileDevice #alien {
+    width: 200px;
+    left: -190px;
+    top: 80px;
+    background: none;
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -47,7 +47,7 @@ let card1 = {
     1: `Get Z-013 and run left`,
     2: `Get Z-013 and run right`
 }, card6_2_1 = {
-    line: `Hoping for Z-013's assistance, you see a reflection of her in the huge, mirror-like eyes of the alien. She's clearly frozen in place as well! You feel your spirit leaving your body, amd an image of a space ant flashes before your eyes, followed by complete darkness...`,
+    line: `Hoping for Z-013's assistance, you see a reflection of her in the huge, mirror-like eyes of the alien. She's clearly frozen in place as well! You feel your spirit leaving your body, and an image of a space ant flashes before your eyes, followed by complete darkness...`,
     1: `You died.`,
     2: `  `
 }, card6_2_2 = {

@@ -29,10 +29,25 @@ for (let i = 0; i <= 1; i++) {
     id.choice[i].innerHTML = story.card1[i + 1];
 
     id.choice[i].onclick = () => {
+        let fitScreen = (mobile) => {
+            if (mobile.matches) {
+                id.placeholder.style.display = 'none';
+            }else {
+                id.placeholder.style.display = 'block';
+            }
+        }
+        
+        let mobile = window.matchMedia('(max-width: 1200px)');
+        mobile.addListener(fitScreen);
+
+        window.onload = () => {
+            window.fitScreen = fitScreen(mobile);
+        }
+
         localStorage.setItem('answer', id.choice[i].innerHTML);
         let storedAnswer = localStorage.getItem('answer');
         placeholder.style = 'animation: showPrev 0.7s ease;';
-        
+
         setTimeout(() => {
             placeholder.style = 'display: block;';
         }, 690);
@@ -72,7 +87,7 @@ for (let i = 0; i <= 1; i++) {
             }
         }
 
-        if (storedAnswer == story.card2_1[i + 1] || 
+        if (storedAnswer == story.card2_1[i + 1] ||
             storedAnswer == story.card2_2[i + 1]) {
             cardNumber3();
         }

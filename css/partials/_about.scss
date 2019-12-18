@@ -8,6 +8,7 @@
             width: 30px;
             opacity: 0.6;
             transition: 200ms;
+            cursor: pointer;
         }
 
         img:hover {
@@ -48,73 +49,100 @@
     opacity: 1;
 }
 
+#aboutContent {
+    position: absolute;
+    background: rgba($game-black, 0.7);
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: aboutGame 500ms;
+    z-index: 100;
+}
+
+@keyframes aboutGame {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 .about-container {
+    position: absolute;
     box-shadow: 0 0 10px $game-black;
     min-width: 500px;
     max-width: 500px;
     min-height: 300px;
     max-height: 300px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    background: $game-black;
-    padding: 10px 0 0;
-    position: relative;
+    border-radius: 3px;
+    background: linear-gradient(30deg,#42cbd4, #e7f158);
+    background-size: 150% 150%;
+    background-position: 50% 150%;
+    animation: gradient 10s infinite ease-in-out;
+    padding: 20px 0 0;
     transition: 200ms;
-    z-index: 9;
-    animation: enteringGame 0.7s ease-in;
+
+        #closeAbout {
+            right: 7px;
+            top: 7px;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            border-radius: 100%;
+            z-index: 9999;
+
+                .cross {
+                    position: absolute;
+                    width: 3px;
+                    height: 25px;
+                    border-top-left-radius: 100%;
+                    border-bottom-right-radius: 100%;
+                    transform: rotate(43deg);
+                    top: 3px;
+                    right: 15px;
+                    background: rgba($game-black, 0.7);
+                }
+
+                .cross:nth-child(2) {
+                    transform: rotate(-43deg) scaleX(-1);
+                }
+        }
+
+        #closeAbout:hover .cross {
+            background: $game-black;
+        }
 
         p {
-            @include calcRem(18);
-            padding: 10px 20px;
+            @include calcRem(16);
+            padding: 0 60px 0 30px;
             cursor: pointer;
             font-family: 'Signika Negative', sans-serif;
             font-weight: 400;
             list-style: none;
             cursor: default;
-            margin: 10px 0;
-        }
-        
-        #back {
-            position: relative;
-            top: 40px;
-            left: 20px;
-            text-decoration: none;
-            font-family: 'Permanent Marker', sans-serif;
-            color: rgba($game-white, 0.8);
-            @include calcRem(17);
-        }
-        
-        #back span::before {
-            content: '\00ab';
-            position: absolute;
-            left: -19px;
-            top: -1px;
-            transition: 200ms;
-        }
-
-        #back:hover span::before {
-            left: -26px;
+            margin: 10px 0 0;
+            color: rgba($game-black, 0.8);
         }
 
         #github {
             position: relative;
-            top: 40px;
-            left: 100px;
+            top: 20px;
+            left: 0;
             text-decoration: none;
             font-family: 'Permanent Marker', sans-serif;
-            color: rgba($game-white, 0.8);
+            color: rgba($game-black, 0.8);
             @include calcRem(17);
         }
         
         #github span::after {
             content: '\00bb';
             position: absolute;
-            right: -19px;
+            right: -16px;
             top: -1px;
             transition: 200ms;
         }
 
         #github:hover span::after {
-            right: -26px;
+            right: -21px;
         }
 }

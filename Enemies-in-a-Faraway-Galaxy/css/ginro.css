@@ -430,3 +430,27 @@
 .ginrogun .gunWrapper {
     animation: none;
 }
+
+.ginroeyehidden {
+    position: absolute;
+    top: 16px;
+    left: 21px;
+    width: 10px;
+    height: 12px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 100%;
+    background: radial-gradient(#272727 20%, rgb(108, 161, 192) 40%, #c9c9c9 49%);
+    background-size: 105%;
+    background-position: -20px -2px;
+    box-shadow: inset 0 0 2px 1px #a5a5a5, 0 0 5px #412200c2;
+}
+
+.ginroeyehidden:nth-child(5) {
+    left: 2px;
+    transform: scaleX(-1);
+    background: radial-gradient(#272727 20%, rgb(108, 161, 192) 40%, #c9c9c9 49%);
+    background-size: 105%;
+    background-position: 19px -2px;
+}

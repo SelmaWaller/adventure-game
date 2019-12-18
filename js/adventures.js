@@ -2,13 +2,30 @@ import setup from './charinfo.js';
 
 for (let i = 0; i <= 3; i++) {
     setup.choice[i].innerHTML = setup.adventures[i];
-    
+
     setTimeout(() => {
         setup.choice[i].onclick = () => {
             localStorage.setItem('adventure', setup.choice[i].innerHTML);
             let chosenAdventure = localStorage.getItem('adventure');
             document.getElementById('adventure').innerHTML = chosenAdventure;
-            
+
+            let fitScreen = (mobile) => {
+                if (mobile.matches) {
+                    setup.preview.style.display = 'none';
+                    setup.placeholder.style.display = 'none';
+                } else {
+                    setup.placeholder.style.display = 'block';
+                    setup.preview.style.display = 'block';
+                }
+            }
+
+            let mobile = window.matchMedia('(max-width: 1200px)');
+            mobile.addListener(fitScreen);
+
+            window.onload = () => {
+                window.fitScreen = fitScreen(mobile);
+            }
+
             setup.imgStyles();
 
             if (chosenAdventure) {

@@ -26,10 +26,26 @@
     <div id="transition"></div>
 
     <div id="aboutTheGame">
-        <a id="aboutImg" href="/about-the-game"><img src="images/about.png" alt="about-the-game"></a>
+        <a id="aboutImg" onclick="about()"><img src="images/about.png" alt="about-the-game"></a>
         <div id="imgTitle">
             <div class="imgTitlePoint"></div>
             <p>About the game</p>
+        </div>
+    </div>
+
+    <div id="aboutContent">
+        <div class="about-container">
+            <div id="closeAbout">
+                <div class="cross"></div>
+                <div class="cross"></div>
+            </div>
+            <p>Hi, there! Thanks for checking out my project.</p>
+            <p>I've been working on this adventure game to get more familiar with vanilla js before moving on to js frameworks, and to work on my skills in pure CSS drawings/animations.</p>
+            <p>I figured that a good way to do that, would be to create a multiple choice game with CSS illustrations connected to the story.</p>
+            <p>Please feel free to check out my repository on Github if you'd like, too!</p>
+            <p>
+                <a id="github" href="https://github.com/SelmaWaller/adventure-game/" target="_blank"><span>See github repo</span></a>
+            </p>
         </div>
     </div>
 
@@ -51,7 +67,6 @@
             <li id="choice4">&nbsp;</li>
         </ul>
     </div>
-    <div class="backgroundLight"></div>
     <div id="preview">
         <div class="overlay">
             <div id="previewImg">
@@ -299,10 +314,80 @@
     </div>
 
     <div id="placeholder"></div>
+
+    <div id="mobileDevice">
+    <h3>This game is not optimized for smaller screens yet...</h3>
+    <div id="ginro">
+        <div id="ginro-container">
+            <div class="ginrohead">
+                <div class="ginrohair"></div>
+                <div class="ginroear"></div>
+                <div class="ginroear"></div>
+                <div class="ginroneck"></div>
+                <div class="ginroeye"></div>
+                <div class="ginroeye"></div>
+            </div>
+            <div class="ginrobody">
+                <div class="ginroarm-top"></div>
+                <div class="ginroarm-top"></div>
+                <div class="ginroarm-bottom"></div>
+                <div class="ginroarm-bottom"></div>
+                <div class="ginrohand"></div>
+                <div class="ginrohand"></div>
+                <div class="ginroleg-top"></div>
+                <div class="ginroleg-top"></div>
+                <div class="ginroleg-bottom"></div>
+                <div class="ginroleg-bottom"></div>
+                <div class="ginroboot">
+                    <div class="ginroboottop"></div>
+                    <div class="ginrobootband"></div>
+                    <div class="ginrobootbottom"></div>
+                </div>
+                <div class="ginroboots">
+                    <div class="ginroboottop"></div>
+                    <div class="ginroboottop"></div>
+                    <div class="ginrobootband"></div>
+                    <div class="ginrobootband"></div>
+                    <div class="ginrobootbottom"></div>
+                    <div class="ginrobootbottom"></div>
+                </div>
+            </div>
+            <div class="ginrobutton"></div>
+            <div class="ginrobutton"></div>
+            <div class="ginrobodyband"></div>
+            <div class="ginrobodyband2"></div>
+            <div class="ginrobodyband3"></div>
+            <div class="ginrobodyband4"></div>
+            <div class="ginroshoulder"></div>
+            <div class="ginroshoulder2"></div>
+            <div class="ginrobelt"></div>
+            <div class="ginrobelt"></div>
+            <div class="ginrobuckle"></div>
+            <div class="ginrogun">
+                <div class="gunWrapper">
+                    <div class="gunBody">
+                        <div class="detail"></div>
+                        <div class="detail"></div>
+                        <div class="detail"></div>
+                    </div>
+                    <div class="trigger"></div>
+                    <div class="light"></div>
+                    <div class="stock"></div>
+                    <div class="laserBlock"></div>
+                    <div class="laser"></div>
+                    <div class="barrel"></div>
+                    <div class="laserPoint"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <footer>
         <p>Copyright © <a href="https://wallerweave.com">Selma Waller</a> 2019</p>
     </footer>
     <script type="module" src="js/adventures.js"></script>
+    <script type="text/javascript" src="js/about.js"></script>
 </body>
 
 </html>
